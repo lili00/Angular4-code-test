@@ -9,11 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
   TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule.withRoutes(
-          [{path: '', component: HomeComponent}])]
-        )
-      ],
+      imports: [ RouterTestingModule ],
       declarations: [
         AppComponent,
         NavComponent,
