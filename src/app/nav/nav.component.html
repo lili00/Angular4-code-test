@@ -1,0 +1,261 @@
+<nav class="navbar visa-navbar" role="navigation" aria-label="main navigation">
+   <div class="container">
+      <div class="navbar-header" id="navCollapsible">
+         <!--disply mobile navbar bar-->
+         <button type="button" class="navbar-toggle collapsed xs-show" data-toggle="collapse" data-target="#nav-search-form" aria-expanded="true" aria-selected="true" aria-collapsed="false" (click)="hideCollapse('myNavbar')">
+         <i class="fa fa-search search-icon" aria-hidden="true"></i>                         
+         </button>
+         <div class="tier-menu collapse" id="nav-search-form">
+            <div class="sub-menu">
+               <div class="container-fluid">
+                  <section id="search" class="form-group form-btn-search" >
+                     <div class="input-group">
+                        <label for="search-input">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <span class="sr-only">Visa Search</span></label>
+                        <input id="search-input" class="form-control input-lg" placeholder="Visa Search" autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
+                        <span class="input-group-btn"> 
+                        <button type="button" class="btn btn-search">GO</button> 
+                        </span>
+                     </div>
+                  </section>
+               </div>
+            </div>
+         </div>
+         <!--mobile navbar bar end-->
+         <button type="button" class="navbar-toggle navbar-pull-right collapsed" data-toggle="collapse" data-target="#myNavbar" (click)="hideCollapse('nav-search-form')">
+         <i class="fa fa-times nav-icon-btn" aria-hidden="true"></i> 
+         <i class="fa fa-bars nav-icon-btn" aria-hidden="true"></i>                         
+         </button>
+         <a class="navbar-brand" href="index.html">
+         <img src="assets/images/logo.png" class="visa-logo" aria-label="visa logo" alt="visa logo">
+         </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+         <ul class="nav navbar-nav navbar-right xs-hidden" id = "navList">
+            <li class="hasArrow panel">
+               <a class="collapsed" data-toggle="collapse" data-parent="#navList" href="#pay-with-visa" (click)="moveX($event)">
+               Pay With Visa</a>
+               <div class="tier-menu collapse" id="pay-with-visa">
+                  <div class="sub-menu">
+                     <ul class="nav">
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-id-card-o subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Visa Checkout</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-credit-card subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Find a Card</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-television subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Visa Offers + Perks</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-mobile subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Mobile Payments</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-paper-plane-o subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Payment Technology</span>
+                           </a>    
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="hasArrow panel">
+               <a class="collapsed" data-toggle="collapse" data-parent="#navList" href="#partner-with-us" aria-expanded="false" aria-haspopup="true" aria-controls="#partner-with-us" 
+                  (click)="moveX($event)" > Partner With Us</a>
+               <div class="tier-menu collapse" id="partner-with-us">
+                  <div class="sub-menu">
+                     <ul class="nav">
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-eye subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Visa Ready</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-mobile subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Payments Technology</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-user-o subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Visa Developer</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-handshake-o subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Info for Partners</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-files-o subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Visa Performance Solutions</span>
+                           </a>    
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li class="hasArrow panel">
+               <a href="#run-your-business" class="collapsed" data-toggle="collapse" data-parent="#navList" aria-expanded="false" aria-haspopup="true" aria-controls="#run-your-business" (click)="moveX($event)"> Run Your Business</a>
+               <div class="tier-menu collapse" id="run-your-business">
+                  <div class="sub-menu">
+                     <ul class="nav">
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-envelope-open-o subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Accept Visa Payments</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-line-chart subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Small Business Tools</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-arrows-alt subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Commercial Solutions</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li> 
+               <a href="index.html" class="p-l-30">Travel With Visa</a>
+            </li>
+            <li class="hasArrow panel">
+               <a href="#visa-everywhere" class="collapsed" data-toggle="collapse" data-parent="#navList" aria-expanded="false" aria-haspopup="true" aria-controls="#visa-everywhere" (click)="moveX($event)"> Run Your Business</a>
+               <div class="tier-menu collapse" id="visa-everywhere">
+                  <div class="sub-menu">
+                     <ul class="nav">
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-lightbulb-o subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Visa Innovations</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-lock subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Secrity</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-globe subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">Global Impact</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <i class="fa fa-handshake-o subNav-icon" aria-hidden="true"></i>
+                           <span class="subNav-label">About Visa</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <span class="nav-icon-left-line"></span> 
+            </li>
+            <li class="search-nav-item hasArrow panel">
+               <button href="#nav-search" class="collapsed" role="button" data-toggle="collapse" data-parent="#navList" aria-expanded="false" aria-haspopup="true" aria-controls="#nav-search" (click)="moveX($event)"><i class="glyphicon glyphicon-search search-icon" aria-hidden="true"></i></button>
+               <div class="tier-menu collapse" id="nav-search">
+                  <div class="sub-menu">
+                     <div class="container-fluid">
+                        <section id="search" class="form-group form-btn-search" >
+                           <div class="input-group">
+                              <label for="search-input">
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                              <span class="sr-only">Visa Search</span></label>
+                              <input id="search-input" class="form-control input-lg" placeholder="Visa Search" autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
+                              <span class="input-group-btn"> 
+                              <button type="button" class="btn btn-search">GO</button> 
+                              </span>
+                           </div>
+                        </section>
+                     </div>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <ul class="nav navbar-nav nav-mobile xs-show" id="mobile-nav">
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle link-arrow" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Pay With Visa</a>
+               <ul class="dropdown-menu">
+                  <li><a href="#">Visa Checkout</a></li>
+                  <li><a href="#">Find a Card</a></li>
+                  <li><a href="#">Visa Offers + Perks</a></li>
+                  <li><a href="#">Mobile Payments</a></li>
+                  <li><a href="#">Payment Technology</a></li>
+               </ul>
+            </li>
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle link-arrow" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+               Partner With Us
+               </a>
+               <ul class="dropdown-menu">
+                  <li><a href="#">Visa Ready</a></li>
+                  <li><a href="#">Payments Technology</a></li>
+                  <li><a href="#">Visa Developer</a></li>
+                  <li><a href="#">Info for Partners</a></li>
+                  <li><a href="#">Visa Performance Solutions</a></li>
+               </ul>
+            </li>
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle link-arrow" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">         
+               Run Your Business
+               </a>
+               <ul class="dropdown-menu">
+                  <li><a href="#">Accept Visa Payments</a></li>
+                  <li><a href="#">Small Business Tools</a></li>
+                  <li><a href="#">Commercial Solutions</a></li>
+               </ul>
+            </li>
+            <li><a href="#" class="p-l-30">Travel With Visa</a></li>
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle link-arrow" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+               Visa Everywhere
+               </a>
+               <ul class="dropdown-menu">
+                  <li><a href="#">Visa Innovations</a></li>
+                  <li><a href="#">Secrity</a></li>
+                  <li><a href="#">Global Impact</a></li>
+                  <li><a href="#">About Visa</a></li>
+               </ul>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+<div class="navline">
+   <div class="nav-indicator-bar" [ngStyle]="{'background-position': linePositon }" >
+      <div class="nav-indicator xs-hidden" id="indicator" 
+      [ngStyle]="{
+         'display': (itemPositon > 0)? 'block' : 'none',  
+         'left.px': itemPositon, 
+         'animation': 'fade 0.3s'
+         }"><img src="assets/images/global-nav-indicator.png" alt="Navigation Indication"></div>
+   </div>
+</div>
