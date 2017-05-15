@@ -1,3 +1,17 @@
+$light-gray: #ccc;
+$color-white: #fff;
+$color-orange: #f7b600;
+$primary-blue: #1a1f71;
+
+@mixin linearGradient($args, $left, $right){
+    background: $left;
+    background: -webkit-linear-gradient($args,  $left 0%, $right 100%); 
+    background: -o-linear-gradient($args,  $left 0%, $right 100%); 
+    background: -moz-linear-gradient($args,  $left 0%, $right 100%); 
+    background: linear-gradient($args, $left 0%, $right 100%);
+}
+
+
 .xs-show {
   display: none !important;
 }
@@ -15,18 +29,16 @@
   padding-top: 28px;
   padding-bottom: 28px;
   &:hover, &:focus {
-    background-color: rgba(0, 0, 0, 0);
-    color: #f7b600;
+    background-color: transparent;
+    color: $color-orange;
   }
 }
 
 .panel {
   margin-bottom: 0px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: 0px;
   border-radius: 0px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 /* visa navbar style */
@@ -35,10 +47,7 @@
   border-radius: 0;
   font-family: 'Roboto-light', sans-serif;
   font-weight: 200;
-  background: #1a1e5a;
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0, #1a1e5a), color-stop(100%, #122d98));
-  background: -webkit-linear-gradient(45deg, #1a1e5a 0, #122d98 100%);
-  background: linear-gradient(45deg, #1a1e5a 0, #122d98 100%);
+  @include linearGradient(45deg, #1a1e5a, #122d98);
   .navbar-nav {
     font-size: 1.8rem;
     padding-top: .5rem;
@@ -54,7 +63,7 @@
   .sub-menu {
     text-align: center;
     .subNav-icon {
-      color: #1a1f71;
+      color: $primary-blue;
       font-size: 36px;
       line-height: 1;
       display: block;
@@ -86,7 +95,7 @@
     > a {
       padding: 0 32px;
       &:hover, &:focus {
-        background-color: rgba(0, 0, 0, 0);
+        background-color: transparent;
       }
     }
   }
@@ -100,7 +109,7 @@
 
 .form-btn-search {
   .form-control {
-    border: 1px solid #cccccc;
+    border: 1px solid $light-gray;
     border-right: 0;
     padding-left: .6rem;
     height: 44px;
@@ -130,11 +139,11 @@
   width: 1%;
   vertical-align: middle;
   display: table-cell;
-  border: 1px solid #cccccc;
+  border: 1px solid $light-gray;
   color: #333;
   border-left: 0;
   height: 44px;
-  background-color: #fff;
+  background-color: $color-white;
   font-size: 1.5rem;
   border-radius: 0;
   &:focus {
@@ -157,7 +166,7 @@
 }
 
 .search-icon {
-  color: #f7b600;
+  color: $color-orange;
   font-size: 30px;
 }
 
@@ -313,7 +322,7 @@
     border-left: 1px solid rgba(255, 255, 255, 0.25);
   }
   .navbar-toggle .nav-icon-btn {
-    color: #fff;
+    color: $color-white;
     font-size: 2.5rem;
   }
   .navbar-pull-right {
@@ -344,8 +353,8 @@
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid #999;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   }
   .navbar-nav > li > a {
     color: #333;
@@ -358,12 +367,12 @@
   }
   .visa-navbar .nav-mobile {
     margin-bottom: 0;
-    background-color: #fff;
+    background-color: $color-white;
     margin-top: 0;
     > li {
       border-bottom: .1rem solid #dedede;
       padding: 2rem 0;
-      background-color: #fff;
+      background-color: $color-white;
       margin: 0 15px;
       &:last-child {
         border-bottom: 0;
@@ -384,7 +393,7 @@
     .link-arrow:before {
       font-family: FontAwesome;
       content: '\f105';
-      color: #1a1f71;
+      color: $primary-blue;
       font-size: 2.5rem;
       line-height: 1;
       padding-right: 10px;
@@ -412,7 +421,7 @@
           font-size: 1.9rem;
           font-weight: 200;
           font-family: 'Roboto-light', sans-serif, Tahoma;
-          color: #1a1f71;
+          color: $primary-blue;
         }
       }
     }
@@ -444,7 +453,7 @@
     }
   }
   .btn-search {
-    background-color: #fff;
+    background-color: $color-white;
     &:focus {
       outline: none;
     }
